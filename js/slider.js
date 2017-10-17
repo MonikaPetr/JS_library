@@ -7,11 +7,18 @@ window.onload = function(){
 }
 var slider = document.getElementById('slider');
 var i = 0;
+var sl;
 function slideImage(){
+
+     if(mouseOn == true) {
+         return false;
+     }
+
     var sliderLength =
     slider.getElementsByTagName('li').length - 1;
 
-   var sl = setTimeout(function(){
+   sl = setTimeout(function(){
+    
 
        if(i == sliderLength){
             i = 0;
@@ -27,7 +34,8 @@ function slideImage(){
 }
 
 function direction(side) {
-    
+    stopSlider();
+
     if(side == "right") {
         if(i == slider.getElementsByTagName("li").length - 1) {
             slider.getElementsByTagName("li")[i].style.display = "none";
@@ -50,4 +58,17 @@ function direction(side) {
             slider.getElementsByTagName("li")[i].style.display = "block";
         }
     }
+}
+
+function stopSlider() {
+    clearTimeout(sl)
+    mouseOn = true;
+
+}
+
+function startSlider() {
+    mouseOn = false;
+
+    slideImage();
+
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/slider.css">
 </head>
 <body>
-    <div id="hero">
+    <div id="hero" onmouseover="stopSlider()" onmouseout="startSlider()">
         <ul id="slider">
             <li>
                 <img src="https://images.unsplash.com/photo-1483030096298-4ca126b58199?dpr=1&auto=format&fit=crop&w=1950&h=&q=60&cs=tinysrgb&crop=" alt="sky">
@@ -21,8 +21,8 @@
             </li>
         </ul>
         <div class="arrows">
-            <button type="button" class="arrow" id="left" name="button" onclick="direction(left)"><</button>
-            <button type="button" class="arrow" id="right" name="button" onclick="direction(right)">></button>
+            <button type="button" class="arrow" id="left" name="button" onclick="direction('left')"><</button>
+            <button type="button" class="arrow" id="right" name="button" onclick="direction('right')">></button>
         </div>
     </div>
     

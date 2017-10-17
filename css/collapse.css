@@ -1,0 +1,10 @@
+
+.text-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.text-holder {
+    height: 52px;
+    overflow-y: hidden;
+}
